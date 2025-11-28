@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>زهوره 💋</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Tahoma", sans-serif;
+      background: #ffb6d9;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; color: #111;
+    }
+
+    .kisses {
+      position: fixed; inset: 0; pointer-events: none;
+      opacity: 0.18; font-size: 40px; line-height: 1.7;
+      text-align: center; z-index: 0; color: #ff2f6f;
+      white-space: pre-wrap;
+    }
+
+    .container { position: relative; z-index: 1; max-width: 500px; width: 100%; padding: 20px; }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px; padding: 20px;
+      text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 0.4s ease;
+    }
+
+    h1,h2,h3 { margin-bottom: 15px; }
+    p { margin-bottom: 10px; line-height: 1.8; font-size: 15px; }
+
+    .btn {
+      background: #ff5fa8; border: none; color: #fff;
+      padding: 10px 22px; border-radius: 999px;
+      font-size: 15px; cursor: pointer; margin: 8px 5px;
+      transition: .1s; box-shadow: 0 4px 12px rgba(255,95,168,.6);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: scale(.96); }
+
+    .btn-secondary {
+      background:#fff; color:#ff5fa8; border:1px solid #ff5fa8;
+    }
+
+    .hidden { display:none; }
+
+    .loader { display:flex; flex-direction:column; align-items:center; gap:15px; }
+    .spinner {
+      width:40px; height:40px; border-radius:50%;
+      border:4px solid #ff9fcc; border-top-color:#ff2f6f;
+      animation: spin .9s linear infinite;
+    }
+
+    .message-box { padding:15px; border-radius:18px; margin-top:10px; font-size:14px; font-weight:600; }
+    .message-pink { background:#ffd7ec; color:#000; }
+    .message-red { background:#ff4d4d; color:#000; }
+
+    @keyframes spin { to{ transform:rotate(360deg); } }
+    @keyframes fadeIn {
+      from{ opacity:0; transform:translateY(10px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- خلفية بوسات -->
+<div class="kisses">
+💋 💋 💋 💋 💋 💋 💋 💋
+💋 💋 💋 💋 💋 💋 💋 💋
+💋 💋 💋 💋 💋 💋 💋 💋
+💋 💋 💋 💋 💋 💋 💋 💋
+</div>
+
+<!-- 🎵 موسيقى الاغنية من اليوتيوب (مخفيه) -->
+<iframe 
+  id="bg-music"
+  width="0" height="0"
+  src="https://www.youtube.com/embed/ZSuHqW96XSU?autoplay=1&loop=1&playlist=ZSuHqW96XSU"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
+<!-- 🔊 صوت الضغطه -->
+<audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+<div class="container">
+
+  <!-- شاشة البداية -->
+  <div id="screen-start" class="card">
+    <h2>انتي زهوره؟ 🫢</h2>
+    <button class="btn" onclick="goToSecond()">اي</button>
+  </div>
+
+  <!-- شاشة 2 -->
+  <div id="screen-second" class="card hidden">
+    <h2>تجين نعرف شنو هيه زهوره 🫢😂😂</h2>
+    <button class="btn" onclick="goToMenu()">يلا</button>
+  </div>
+
+  <!-- قائمة الخيارات -->
+  <div id="screen-menu" class="card hidden">
+    <h2>شتريدين تعرفين عن زهورات؟ 💋</h2>
+    <button class="btn" onclick="openMessage(1)">١. شنو هيه وشنو تكون</button>
+    <button class="btn" onclick="openMessage(2)">٢. شنو تحب</button>
+    <button class="btn" onclick="openMessage(3)">٣. شنو تكره</button>
+    <button class="btn" onclick="openMessage(4)">٤. طموحها</button>
+    <button class="btn" onclick="openMessage(5)">٥. رساله جميله لزهورتي</button>
+  </div>
+
+  <!-- شاشة التحميل -->
+  <div id="screen-loader" class="card hidden">
+    <div class="loader">
+      <p id="loader-text"></p>
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <!-- الرسالة 1 -->
+  <div id="screen-msg1" class="card hidden">
+    <h3>شنو هيه وشنو تكون 🌸</h3>
+    <div class="message-box message-pink">
+      زهوره وحده حلوه بصراويه تحب لخير للناس لطيفه بس ما تعرف تتحكم بتصرفاتها
+      تجرح الي يحبونها بس ما تتقصد لانها احلى شي بهلدنيه<br><br>
+      زهوره طموحه وشطوره بدراستها ولكل يحبها ودوم هيه وعباس يتعاركون طاحضهم وحضي وحضها😂😂💋<br><br>
+      زهورات عمرها 17 سنه ضحكتها تخبل بس الله يهديها دوم ملطلطه طاحضها بس هم نحبها😂😂💔<br><br>
+      اتمنى لزوزي كل لفرحه الها لانها تستاهل زهوره انسانه حلوه 🫢💋
+    </div>
+    <button class="btn-secondary" onclick="backToMenu()">رجوع</button>
+  </div>
+
+  <!-- الرسالة 2 -->
+  <div id="screen-msg2" class="card hidden">
+    <h3>شنو تحب 💕</h3>
+    <div class="message-box message-pink">
+      تحب الدراسه تحب الدلع زهيره وكحه تحب الناس يتقبولها هيه حلوه
+      بس مو لهدرجه عنيده هوايييي تعاند 😂<br><br>
+      تحب اهلها تحب اخوانها تحب لفلوس😂😂🫢 يلا فداها ولي كملي لباقي
+    </div>
+    <button class="btn-secondary" onclick="backToMenu()">رجوع</button>
+  </div>
+
+  <!-- الرسالة 3 -->
+  <div id="screen-msg3" class="card hidden">
+    <h3>شنو تكره 😈</h3>
+    <div class="message-box message-pink">
+      تكره الخذلان تكره الجذب بس هيه ادبسز هسه تكلي ها عباس جاي تداوي وتجرح😂😂<br><br>
+      تكره الماضي تكره كسران لثقه تكره تقويمها امداها خبيثه🙂<br><br>
+      وتكره الناس الي خذلوها وتكره الدراسه بس هيه شطوره وتكرهنيييي🔪🔪
+    </div>
+    <button class="btn-secondary" onclick="backToMenu()">رجوع</button>
+  </div>
+
+  <!-- الرسالة 4 -->
+  <div id="screen-msg4" class="card hidden">
+    <h3>طموحها 🎓</h3>
+    <div class="message-box message-pink">
+      قبل ما ابدي بطموحها خلي اخذ بوسه مححح الها ولو ضايج منها 🙂💔<br><br>
+      طموحها محاسبه وطموحها عالي واني وياها بكل قرار<br><br>
+      طموحها اعفاء، طموحها تنجح وتتوفق وتعيش حياتها بسعاده وترفع راسي❤🫂🫂
+    </div>
+    <button class="btn-secondary" onclick="backToMenu()">رجوع</button>
+  </div>
+
+  <!-- الرسالة 5 -->
+  <div id="screen-msg5" class="card hidden">
+    <h3>رساله جميله لزهورتي ❤️</h3>
+    <div class="message-box message-red">
+      اتمنالج كل لتوفيق بحياتج واريدج دائما شاطره وقويه ومحد يكدرلج<br>
+      اريدج تحاربين لكل واني بضهرج دائما وما اخذلج بوقت ضياعج<br>
+      ولو ضايج منج تففف بس اريد تعرفين اني دوم وياج<br>
+      فانجبي وشدي حيلج واصبري وكوني قويه حتى افتخر بيج 💋❤
+    </div>
+    <button class="btn-secondary" onclick="backToMenu()">رجوع</button>
+  </div>
+
+</div>
+
+<script>
+function playClick(){
+  let s = document.getElementById("click-sound");
+  s.currentTime = 0; s.play().catch(()=>{});
+}
+
+function showScreen(id){
+  ["screen-start","screen-second","screen-menu","screen-loader",
+   "screen-msg1","screen-msg2","screen-msg3","screen-msg4","screen-msg5"]
+   .forEach(el => document.getElementById(el).classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function goToSecond(){
+  playClick();
+  setTimeout(()=>{ showScreen("screen-second"); },400);
+}
+
+function goToMenu(){
+  playClick();
+  setTimeout(()=>{ showScreen("screen-menu"); },400);
+}
+
+function openMessage(num){
+  playClick();
+  let txt = document.getElementById("loader-text");
+
+  if(num===1) txt.textContent="اوكفي خلي احجيلج عن زهوره...";
+  if(num===2) txt.textContent="هسه اكلج شنو تحب اصبري...";
+  if(num===3) txt.textContent="دخلي جو ويه شنو تكره زهوره...";
+  if(num===4) txt.textContent="خلي نحجيلج عن طموحها شويه...";
+  if(num===5) txt.textContent="جاري تجهيز رساله حب...";
+
+  showScreen("screen-loader");
+
+  setTimeout(()=>{ showScreen("screen-msg"+num); },5000);
+}
+
+function backToMenu(){
+  playClick();
+  setTimeout(()=>{ showScreen("screen-menu"); },400);
+}
+</script>
+
+</body>
+</html>
